@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+background-color: #001524;
+color: #15616d;
+font-family: 'manga', 'arial', sans-serif;
+
+}
+
+
+
+
+@font-face {
+  font-family: manga;
+  src: url(assets/Fonts/mangat.ttf) format("opentype");
+}
+
