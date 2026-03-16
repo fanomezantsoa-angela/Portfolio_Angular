@@ -1,0 +1,40 @@
+.presentation_div{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+   justify-content: space-evenly
+
+}
+.summary{
+  
+
+}
+.position{
+
+
+}
+.student{
+
+
+}
+.Text_presentation{
+
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+.name{
+ font-weight: bold;
+ color: #ffecd1;
+
+}
+.photo_presentation{
+    margin-left: 65%;
+    margin-top: 12%;
+   
+   
+
+}
+.photo_presentation img{
+    width: 60%;
+}
