@@ -11,5 +11,10 @@ font-family: 'manga', 'arial', sans-serif;
 @font-face {
   font-family: manga;
   src: url(assets/Fonts/mangat.ttf) format("opentype");
+
+}
+@font-face {
+    font-family: hiromisake;
+   src: url(assets/Fonts/HiroMisakeJapaneseGraffiti-5yG0a.otf) format("opentype");
 }
 
