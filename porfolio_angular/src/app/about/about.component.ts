@@ -1,18 +1,18 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslationService, Lang } from '../../Services/Translation.service';
-
 @Component({
   standalone: true,
-  selector: 'app-contacts',
-  templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.css'],
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.css'],
   imports: [CommonModule],
 })
-export class ContactsComponent {
+export class AboutComponent {
   private translation = inject(TranslationService);
-
+ 
   t(key: string): string {
     return this.translation.t(key);
   }
 }
+ 

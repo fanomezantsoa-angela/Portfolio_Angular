@@ -1,1 +1,26 @@
-<p>skills works!</p>
+<section class="section" id="skills">
+  <div class="chapter-label">
+    <span class="num">{{ t('skills.chapterNum') }}</span>
+    <div class="line"></div>
+    <span class="ch-title">{{ t('skills.chapterTitle') }}</span>
+    <div class="line"></div>
+  </div>
+
+  <div class="skills-grid">
+    <div class="manga-panel sk-panel" *ngFor="let sk of skills; let i = index" [attr.data-delay]="i * 80">
+      <div class="panel-caption">{{ t(sk.captionKey) }}</div>
+      <span class="sk-icon">{{ sk.icon }}</span>
+      <div class="sk-cat">{{ t(sk.catKey) }}</div>
+      <div class="sk-title">{{ t(sk.titleKey) }}</div>
+      <div class="stat-wrap">
+        <div class="stat-row" *ngFor="let bar of sk.bars">
+          <span class="slabel">{{ bar.label }}</span>
+          <div class="stat-bar">
+            <div class="stat-fill" [attr.data-w]="bar.w"></div>
+          </div>
+          <span class="sval">{{ bar.w }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

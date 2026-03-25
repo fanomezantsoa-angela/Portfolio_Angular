@@ -1,17 +1,130 @@
-img{
-    width: 4%;
-  
-  
+.contact-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 12px;
 }
-.contact_div div {
-   display: inline;
-   margin: 5px 7px;
 
-
-  
-  
+.contact-main {
+  padding: 32px 28px;
 }
-.contact_div{
-  margin-top: 10%;
-    margin-left: 60%;
+
+.contact-content {
+  margin-top: 22px;
+}
+
+.ct-tagline {
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+
+.ct-tagline em {
+  color: var(--orange);
+  font-style: normal;
+}
+
+.ct-sub {
+  font-size: 11px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.ct-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.ct-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(255, 125, 0, 0.08);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.ct-link:hover {
+  color: var(--orange);
+}
+
+.ct-icon {
+  width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ct-icon img {
+  width: 16px;
+  height: 16px;
+  /* Make SVG icons visible on dark bg — filter to white */
+  filter: invert(1) opacity(0.45);
+  transition: filter 0.3s;
+}
+
+.ct-link:hover .ct-icon img {
+  filter: invert(1) opacity(0.9) sepia(1) saturate(5) hue-rotate(5deg);
+}
+
+.ct-arrow {
+  margin-left: auto;
+  color: rgba(255, 125, 0, 0.35);
+  transition: transform 0.3s, color 0.3s;
+}
+
+.ct-link:hover .ct-arrow {
+  transform: translateX(4px);
+  color: var(--orange);
+}
+
+/* Side cards */
+.contact-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ct-card {
+  padding: 18px;
+  flex: 1;
+}
+
+.ct-card-content {
+  margin-top: 18px;
+}
+
+.ct-clabel {
+  font-size: 8px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255, 125, 0, 0.45);
+  margin-bottom: 8px;
+}
+
+.ct-cval {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* Closing mark */
+.fin {
+  text-align: center;
+  padding: 40px 0 60px;
+  font-size: 9px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.12);
 }

@@ -1,11 +1,28 @@
-  <div id="presentation-container">
- <span class="logo">Coding</span>
-  
-     <app-presentation></app-presentation>
-     <footer>
-       <app-contacts></app-contacts>
+<div class="bg-glow"></div>
+<canvas id="leafCanvas"></canvas>
 
-     </footer>
-
-    
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Angela.dev</div>
+  <div class="nav-links">
+    <a href="#about">{{ t('nav.about') }}</a>
+    <a href="#projects">{{ t('nav.projects') }}</a>
+    <a href="#skills">{{ t('nav.skills') }}</a>
+    <a href="#contact">{{ t('nav.contact') }}</a>
   </div>
+  <div class="lang-switch">
+    <button [class.active]="currentLang() === 'fr'" (click)="setLang('fr')">FR</button>
+    <span>·</span>
+    <button [class.active]="currentLang() === 'en'" (click)="setLang('en')">EN</button>
+  </div>
+</nav>
+
+<!-- SECTIONS -->
+<app-presentation></app-presentation>
+<app-about></app-about>
+<app-projects></app-projects>
+<app-skills></app-skills>
+
+<footer>
+  <app-contacts></app-contacts>
+</footer>

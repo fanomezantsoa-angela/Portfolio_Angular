@@ -1,0 +1,126 @@
+.proj-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.proj-wide {
+  grid-column: 1 / -1;
+}
+
+.proj-lines {
+  position: absolute;
+  top: 0; right: 0;
+  width: 35%; height: 60%;
+  pointer-events: none;
+}
+
+.proj-inner {
+  padding: 24px 22px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 14px;
+}
+
+.proj-meta {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 125, 0, 0.4);
+  margin-bottom: 8px;
+}
+
+.proj-title {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.proj-title-wide {
+  font-size: 24px;
+}
+
+.stage-badge {
+  display: inline-block;
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  background: rgba(255, 125, 0, 0.12);
+  border: 1px solid rgba(255, 125, 0, 0.3);
+  color: rgba(255, 125, 0, 0.7);
+  margin-bottom: 8px;
+}
+
+/* PSR blocks */
+.psr {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.psr-three {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.psr-one {
+  grid-template-columns: 1fr;
+}
+
+.psr-block {
+  border-left: 2px solid rgba(255, 125, 0, 0.2);
+  padding-left: 10px;
+}
+
+.psr-label {
+  font-size: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 125, 0, 0.45);
+  margin-bottom: 4px;
+}
+
+.psr-text {
+  font-size: 11px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
+}
+
+.stack-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.proj-links {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.plink {
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.plink.gh {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.plink.gh:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.7);
+}

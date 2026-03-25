@@ -1,21 +1,91 @@
+<section class="section" id="contact">
+  <div class="chapter-label">
+    <span class="num">{{ t('contact.chapterNum') }}</span>
+    <div class="line"></div>
+    <span class="ch-title">{{ t('contact.chapterTitle') }}</span>
+    <div class="line"></div>
+  </div>
 
+  <div class="contact-grid">
 
-<div class="contact_div">
+    <!-- Main panel -->
+    <div class="manga-panel contact-main" data-delay="0">
+      <div class="panel-caption">{{ t('contact.panelCaption') }}</div>
+      <div class="contact-content">
+        <div class="ct-tagline">
+          {{ t('contact.tagline') }} <em>{{ t('contact.taglineEm') }}</em> {{ t('contact.taglineEnd') }}
+        </div>
+        <div class="ct-sub">{{ t('contact.subtitle') }}</div>
+        <div class="ct-links">
+          <a class="ct-link"
+             href="https://mail.google.com/mail/?view=cm&to=angelafanomezantsoa710@gmail.com"
+             target="_blank">
+            <span class="ct-icon">
+              <img src="assets/images/mail.svg" alt="email">
+            </span>
+            angelafanomezantsoa710@gmail.com
+            <span class="ct-arrow">→</span>
+          </a>
+          <a class="ct-link"
+             href="https://www.linkedin.com/in/angela-fanomezantsoa-b641b1388/"
+             target="_blank">
+            <span class="ct-icon">
+              <img src="assets/images/linkedin.svg" alt="linkedin">
+            </span>
+            linkedin.com/in/angela-fanomezantsoa
+            <span class="ct-arrow">→</span>
+          </a>
+          <a class="ct-link"
+             href="https://github.com/fanomezantsoa-angela"
+             target="_blank">
+            <span class="ct-icon">
+              <img src="assets/images/github.svg" alt="github">
+            </span>
+            github.com/Fanomezantsoa-Angela
+            <span class="ct-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
 
-    <div>
+    <!-- Side cards -->
+    <div class="contact-side">
 
-        <a href="https://mail.google.com/mail/?view=cm&to=angelafanomezantsoa710@gmail.com" target="_blank"><img src="../../assets/images/mail.svg" alt=""></a>
+      <div class="manga-panel ct-card" data-delay="80">
+        <div class="panel-caption">{{ t('contact.focusCaption') }}</div>
+        <div class="ct-card-content">
+          <div class="ct-clabel">{{ t('contact.focusLabel') }}</div>
+          <div class="ct-cval">
+            Architecture web<br>
+            Qualité logicielle<br>
+            Java / Spring Boot / Angular
+          </div>
+        </div>
+      </div>
+
+      <div class="manga-panel ct-card" data-delay="150">
+        <div class="panel-caption">{{ t('contact.locationCaption') }}</div>
+        <div class="ct-card-content">
+          <div class="ct-clabel">{{ t('contact.locationLabel') }}</div>
+          <div class="ct-cval">
+            {{ t('contact.locationVal') }}
+          </div>
+        </div>
+      </div>
+
+      <div class="manga-panel ct-card" data-delay="220">
+        <div class="panel-caption">{{ t('contact.langCaption') }}</div>
+        <div class="ct-card-content">
+          <div class="ct-clabel">{{ t('contact.langLabel') }}</div>
+          <div class="ct-cval">
+           Français ·  English<br>
+            Malgache
+          </div>
+        </div>
+      </div>
 
     </div>
-      <div>
+  </div>
 
-        <a href="https://www.linkedin.com/in/angela-fanomezantsoa-b641b1388/" target="_blank"><img src="../../assets/images/linkedin.svg" alt=""></a>
-        
-      </div>
-      <div>
-
-        <a href="https://github.com/fanomezantsoa-angela" target="_blank"><img src="../../assets/images/github.svg" alt=""></a>
-        
-      </div>
-
-</div>
+  <div class="fin">{{ t('contact.fin') }}</div>
+</section>

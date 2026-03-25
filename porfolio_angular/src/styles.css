@@ -1,20 +1,200 @@
-:root{
-background-color: #001524;
-color: #ffff;
-font-family: 'manga', 'arial', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
+:root {
+  --navy: #001524;
+  --orange: #ff7d00;
+  --white: #ffffff;
+  --muted: rgba(255, 255, 255, 0.45);
+  --border: rgba(255, 125, 0, 0.28);
+  --panel-bg: rgba(255, 125, 0, 0.02);
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  background: var(--navy);
+  color: var(--white);
+  font-family: 'manga', 'Cormorant Garamond', serif;
+  overflow-x: hidden;
+}
 
 @font-face {
   font-family: manga;
-  src: url(assets/Fonts/mangat.ttf) format("opentype");
-
-}
-@font-face {
-    font-family: hiromisake;
-   src: url(assets/Fonts/HiroMisakeJapaneseGraffiti-5yG0a.otf) format("opentype");
+  src: url(assets/Fonts/mangat.ttf) format('opentype');
 }
 
+/* ── LEAF CANVAS ── */
+#leafCanvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── BG GLOW ── */
+.bg-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 55% 45% at 75% 30%, rgba(255, 125, 0, 0.055) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 50% at 10% 85%, rgba(0, 80, 160, 0.07) 0%, transparent 60%);
+}
+
+/* ── SECTION ── */
+.section {
+  position: relative;
+  z-index: 10;
+  padding: 100px 48px 80px;
+}
+
+/* ── MANGA PANEL ── */
+.manga-panel {
+  border: 1.5px solid var(--border);
+  background: var(--panel-bg);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.65s ease, transform 0.65s ease,
+              border-color 0.3s, background 0.3s;
+}
+
+.manga-panel.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.manga-panel:hover {
+  border-color: rgba(255, 125, 0, 0.55);
+  background: rgba(255, 125, 0, 0.05);
+}
+
+.manga-panel::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 16px; height: 16px;
+  background: linear-gradient(135deg, transparent 50%, rgba(255, 125, 0, 0.25) 50%);
+  pointer-events: none;
+}
+
+/* ── PANEL CAPTION ── */
+.panel-caption {
+  position: absolute;
+  top: 0; left: 0;
+  background: rgba(255, 125, 0, 0.82);
+  color: var(--navy);
+  font-size: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  font-weight: 700;
+  z-index: 3;
+}
+
+/* ── CHAPTER LABEL ── */
+.chapter-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 44px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.chapter-label.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.chapter-label .line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 125, 0, 0.18);
+}
+
+.chapter-label .num {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: rgba(255, 125, 0, 0.4);
+}
+
+.chapter-label .ch-title {
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ── STACK TAG ── */
+.stack-tag {
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid rgba(255, 125, 0, 0.2);
+  color: rgba(255, 125, 0, 0.6);
+  transition: all 0.3s;
+}
+
+.stack-tag:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+/* ── STAT BAR ── */
+.stat-bar {
+  flex: 1;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.stat-fill {
+  height: 100%;
+  background: var(--orange);
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes expandWidth {
+  from { width: 0; }
+  to   { width: 110px; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.06); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}

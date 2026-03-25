@@ -1,13 +1,71 @@
-#presentation-container{
-  
-
-
-   
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background: rgba(0, 21, 36, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 125, 0, 0.1);
 }
-.logo{
-     color: #ff7d00;
-     font-size: xx-large;
-    margin-left: 3%;
-    font-family: 'hiromisake', 'arial', sans-serif
-    
+
+.nav-logo {
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--orange);
+  opacity: 0.85;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--orange);
+}
+
+/* Language switcher */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-switch span {
+  color: rgba(255, 125, 0, 0.3);
+  font-size: 12px;
+}
+
+.lang-switch button {
+  background: transparent;
+  border: none;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  padding: 4px 6px;
+  transition: color 0.3s;
+  font-family: inherit;
+}
+
+.lang-switch button:hover {
+  color: var(--orange);
+}
+
+.lang-switch button.active {
+  color: var(--orange);
+  border-bottom: 1px solid var(--orange);
 }

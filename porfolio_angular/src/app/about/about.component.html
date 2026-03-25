@@ -1,0 +1,72 @@
+<section class="section" id="about">
+  <div class="chapter-label">
+    <span class="num">{{ t('about.chapterNum') }}</span>
+    <div class="line"></div>
+    <span class="ch-title">{{ t('about.chapterTitle') }}</span>
+    <div class="line"></div>
+  </div>
+
+  <div class="about-grid">
+
+    <!-- Main panel -->
+    <div class="manga-panel about-main" data-delay="0">
+      <div class="panel-caption">{{ t('about.panelCaption') }}</div>
+      <div class="about-content">
+        <div class="about-title">
+          {{ t('about.title') }} <span>{{ t('about.titleAnd') }}</span> {{ t('about.titleRight') }}
+        </div>
+        <div class="about-subtitle">{{ t('about.subtitle') }}</div>
+        <div class="about-body">
+          <p>{{ t('about.body1') }}</p>
+          <p>{{ t('about.body2') }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Side cards -->
+    <div class="about-side">
+
+      <div class="manga-panel info-card" data-delay="80">
+        <div class="panel-caption">{{ t('about.eduLabel') }}</div>
+        <div class="info-content">
+          <div class="info-label">{{ t('about.eduCurrentLabel') }}</div>
+          <div class="info-val">
+            {{ t('about.eduCurrent') }}<br>
+            {{ t('about.eduCurrentSchool') }}<br>
+            <span class="info-date">{{ t('about.eduCurrentDate') }}</span>
+          </div>
+          <div class="info-label mt">{{ t('about.eduPrevLabel') }}</div>
+          <div class="info-val">
+            {{ t('about.eduPrev') }}<br>
+            {{ t('about.eduPrevSchool') }}<br>
+            <span class="info-date">{{ t('about.eduPrevDate') }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="manga-panel info-card" data-delay="160">
+        <div class="panel-caption">{{ t('about.langLabel') }}</div>
+        <div class="info-content">
+          <div class="info-label">{{ t('about.langSpokenLabel') }}</div>
+          <div class="info-val">
+            Français — DELF B2<br>
+           English — Intermediate<br>
+             Malgache — Langue maternelle
+          </div>
+        </div>
+      </div>
+
+      <div class="manga-panel info-card" data-delay="220">
+        <div class="panel-caption">{{ t('about.locationLabel') }}</div>
+        <div class="info-content">
+          <div class="info-label">{{ t('about.locationBasedLabel') }}</div>
+          <div class="info-val">
+            {{ t('about.locationVal') }}<br>
+            <span class="info-date">{{ t('about.locationSub') }}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

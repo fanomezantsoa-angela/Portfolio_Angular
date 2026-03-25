@@ -1,0 +1,86 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+}
+
+.about-main {
+  padding: 28px 26px;
+}
+
+.about-content {
+  margin-top: 18px;
+}
+
+.about-title {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.about-title span {
+  color: var(--orange);
+}
+
+.about-subtitle {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255, 125, 0, 0.5);
+  margin-bottom: 18px;
+}
+
+.about-body {
+  font-size: 14px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.9;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about-body strong {
+  color: rgba(255, 125, 0, 0.8);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.about-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-card {
+  padding: 16px 18px;
+}
+
+.info-content {
+  margin-top: 18px;
+}
+
+.info-label {
+  font-size: 8px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255, 125, 0, 0.45);
+  margin-bottom: 6px;
+}
+
+.info-label.mt {
+  margin-top: 12px;
+}
+
+.info-val {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+}
+
+.info-date {
+  font-size: 11px;
+  color: rgba(255, 125, 0, 0.5);
+}

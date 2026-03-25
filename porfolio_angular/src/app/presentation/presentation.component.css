@@ -1,41 +1,153 @@
-.presentation_div{
-    font-size: 20px;
-    display: flex;
-    flex-direction: row;
-   justify-content: space-evenly
-
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 100px;
 }
-.summary{
-       font-size: medium;
-  margin-top: 4%;
 
+.hero-left {
+  max-width: 58%;
 }
-.position{
 
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: rgba(255, 125, 0, 0.55);
+  margin-bottom: 14px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.3s;
+}
 
+.im {
+  font-style: italic;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 4px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards 0.9s;
 }
-.student{
- 
 
+.name-big {
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 2px;
+  line-height: 1.05;
+  min-height: 50px;
+  margin-bottom: 20px;
 }
-.Text_presentation{
-   
-    position: absolute;
-    top: 40%;
-    left: 10%;
-}
-.name{
- font-weight: bold;
- color: #ff7d00;
 
+.name-orange {
+  color: var(--orange);
 }
-.photo_presentation{
-    margin-left: 65%;
-    margin-top: 12%;
-   
-   
 
+.ncursor {
+  display: inline-block;
+  width: 2.5px;
+  height: 0.82em;
+  background: var(--orange);
+  margin-left: 3px;
+  vertical-align: middle;
+  animation: blink 0.85s step-end infinite;
 }
-.photo_presentation img{
-    width: 60%;
+
+.ncursor.done {
+  animation: none;
+  opacity: 0;
+}
+
+.divl {
+  width: 0;
+  height: 1px;
+  background: rgba(255, 125, 0, 0.22);
+  margin-bottom: 20px;
+  animation: expandWidth 0.8s ease forwards 3.2s;
+}
+
+.summary-text {
+  border-left: 1.5px solid rgba(255, 125, 0, 0.2);
+  padding-left: 14px;
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.42);
+  line-height: 1.9;
+  min-height: 44px;
+}
+
+.scursor {
+  display: inline-block;
+  width: 1.5px;
+  height: 0.9em;
+  background: rgba(255, 255, 255, 0.3);
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 0.85s step-end infinite;
+}
+
+.scursor.done {
+  animation: none;
+  opacity: 0;
+}
+
+/* AVATAR */
+.hero-right {
+  flex-shrink: 0;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 1.4s ease forwards 0.5s;
+}
+
+.av-wrap {
+  position: relative;
+  width: 190px;
+  height: 190px;
+}
+
+.av-ring {
+  position: absolute;
+  inset: -16px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 125, 0, 0.14);
+  animation: spin 18s linear infinite;
+}
+
+.av-ring2 {
+  position: absolute;
+  inset: -28px;
+  border-radius: 50%;
+  border: 0.5px dashed rgba(255, 125, 0, 0.07);
+  animation: spin 30s linear infinite reverse;
+}
+
+.av-glow {
+  position: absolute;
+  inset: -24px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 125, 0, 0.09) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.av-img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 125, 0, 0.28);
+  background: rgba(255, 125, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 78px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.av-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }

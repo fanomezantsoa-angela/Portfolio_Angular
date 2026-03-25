@@ -1,32 +1,27 @@
-<div class="presentation_div" >
-    <div class="Text_presentation">
-          <div>
-        I'm <span class="name">Angela Fanomezantsoa</span>
-
+<section class="section hero" id="hero">
+  <div class="hero-left">
+    <div class="eyebrow">{{ t('hero.eyebrow') }}</div>
+    <div class="im">{{ t('hero.im') }}</div>
+    <div class="name-big">
+      <span class="name-orange">Angela</span>
+      {{ displayedName }}<span class="ncursor" [class.done]="nameDone"></span>
     </div>
-    <div >
-        <p class="position">
-            Full-Stack Developer
-        </p> 
-        <p class="student">
-            MIAGE Master’s Student
-        </p>
+    <div class="divl"></div>
+    <div class="summary-text">
+      {{ displayedSummary }}<span class="scursor" [class.done]="summaryDone"></span>
     </div>
+  </div>
 
-    <div class="summary">
-        I build modern web applications using technologies like Java, <br>
-
-        Spring Boot, React, and Angular. <br>
-        Passionate about software architecture, clean code, and building reliable systems. <br>
+  <div class="hero-right">
+    <div class="av-wrap">
+      <div class="av-glow"></div>
+      <div class="av-ring"></div>
+      <div class="av-ring2"></div>
+      <div class="av-img">
+       
+      <img src="assets/images/WhatsApp Image 2026-02-26 at 8.42.15 PM(1).jpeg" alt="Angela Fanomezantsoa">
+    
+      </div>
     </div>
-
-    </div>
-
-    <div class="photo_presentation">
-
-        
-
-
-    </div>
-  
-</div>
+  </div>
+</section>

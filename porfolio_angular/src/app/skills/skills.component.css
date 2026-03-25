@@ -1,0 +1,59 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.sk-panel {
+  padding: 20px 16px;
+}
+
+.sk-icon {
+  font-size: 22px;
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.sk-cat {
+  font-size: 8px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255, 125, 0, 0.5);
+  margin-bottom: 6px;
+}
+
+.sk-title {
+  font-size: 15px;
+  color: var(--white);
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.stat-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.slabel {
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  width: 68px;
+  flex-shrink: 0;
+}
+
+.sval {
+  font-size: 9px;
+  color: rgba(255, 125, 0, 0.6);
+  width: 22px;
+  text-align: right;
+}
