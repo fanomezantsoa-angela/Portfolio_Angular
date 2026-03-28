@@ -1,6 +1,6 @@
-import { Component, inject, OnInit, effect } from '@angular/core';
+import { Component, inject, OnInit, OnDestroy, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslationService, Lang } from '../../Services/Translation.service';
+import { TranslationService } from '../../Services/Translation.service';
 
 @Component({
   standalone: true,
@@ -9,7 +9,7 @@ import { TranslationService, Lang } from '../../Services/Translation.service';
   styleUrls: ['./presentation.component.css'],
   imports: [CommonModule],
 })
-export class PresentationComponent implements OnInit {
+export class PresentationComponent implements OnInit, OnDestroy {
   private translation = inject(TranslationService);
 
   displayedName = '';
@@ -17,31 +17,43 @@ export class PresentationComponent implements OnInit {
   nameDone = false;
   summaryDone = false;
 
+  private summaryInterval: any = null;
+  private nameInterval: any = null;
+
+  constructor() {
+    effect(() => {
+      const _ = this.translation.currentLang(); 
+      if (this.nameDone) {
+        this.displayedSummary = '';
+        this.summaryDone = false;
+     
+     
+        setTimeout(() => this.typeSummary(), 400);
+      }
+    });
+  }
+
   t(key: string): string {
     return this.translation.t(key);
   }
 
   ngOnInit() {
     setTimeout(() => this.typeName(), 1400);
+  }
 
- 
-    effect(() => {
-      const _ = this.translation.currentLang(); 
-      if (this.nameDone) {
-        this.displayedSummary = '';
-        this.summaryDone = false;
-        setTimeout(() => this.typeSummary(), 400);
-      }
-    });
+  ngOnDestroy() {
+   
+    clearInterval(this.summaryInterval);
+    clearInterval(this.nameInterval);
   }
 
   private typeName() {
     const text = 'FANOMEZANTSOA';
     let i = 0;
-    const iv = setInterval(() => {
+    this.nameInterval = setInterval(() => {
       this.displayedName += text[i++];
       if (i >= text.length) {
-        clearInterval(iv);
+        clearInterval(this.nameInterval);
         this.nameDone = true;
         setTimeout(() => this.typeSummary(), 800);
       }
@@ -49,14 +61,18 @@ export class PresentationComponent implements OnInit {
   }
 
   private typeSummary() {
+  
+    clearInterval(this.summaryInterval);
+
     const text = this.translation.t('hero.summary');
     let i = 0;
     this.displayedSummary = '';
     this.summaryDone = false;
-    const iv = setInterval(() => {
+
+    this.summaryInterval = setInterval(() => {
       this.displayedSummary += text[i++];
       if (i >= text.length) {
-        clearInterval(iv);
+        clearInterval(this.summaryInterval);
         this.summaryDone = true;
       }
     }, 26);

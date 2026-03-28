@@ -19,7 +19,7 @@
     "titleRight": "MIAGE Student",
     "subtitle": "Université de Lille · Master MIAGE · 2025–2027",
     "body1": "I'm a fullstack developer with a background in computer science from Madagascar, now completing my Master's in MIAGE at Université de Lille. I build production-grade web applications always focused on clean architecture and software quality.",
-    "body2": "I've had real experience at ARATO where I integrated OpenAI APIs, built secure REST APIs with JWT, and shipped full applications end-to-end. I'm now looking for a 3 to 6 month opportunity with the goal of continuing as an apprentice in M2.",
+    "body2": "I've had real experience at ARATO where I integrated OpenAI APIs, built secure REST APIs with JWT, and shipped full applications end-to-end.",
     "eduLabel": "Education",
     "eduCurrentLabel": "Current",
     "eduCurrent": "Master MIAGE",
@@ -94,7 +94,7 @@
     "tagline": "Looking for a team where",
     "taglineEm": "clean code",
     "taglineEnd": "and ambition meet.",
-    "subtitle": "Architecture & software quality · Goal: alternance M2 · Lille, France",
+    "subtitle": "Architecture & software quality ",
     "focusCaption": "Focus",
     "focusLabel": "Looking for",
     "focusVal": "Web architecture\nSoftware quality\nJava / Spring Boot / Angular",
@@ -104,6 +104,6 @@
     "langCaption": "Languages",
     "langLabel": "Spoken",
     "langVal": "🇫🇷 French · 🇬🇧 English\n🇲🇬 Malagasy",
-    "fin": "— fin · Angela Fanomezantsoa · 2025 —"
+    "fin": "— end · Angela Fanomezantsoa · 2025 —"
   }
 }
