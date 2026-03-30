@@ -22,14 +22,11 @@ html {
 body {
   background: var(--navy);
   color: var(--white);
-  font-family: 'manga', 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', serif, 'Arial', 'Segoe UI', sans-serif;
   overflow-x: hidden;
 }
 
-@font-face {
-  font-family: manga;
-  src: url(assets/Fonts/mangat.ttf) format('opentype');
-}
+
 
 #leafCanvas {
   position: fixed;
