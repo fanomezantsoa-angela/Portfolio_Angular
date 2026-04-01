@@ -27,7 +27,7 @@
 }
 
 .ct-sub {
-  font-size: 11px;
+   font-size: 16px;
   font-style: italic;
   color: rgba(255, 255, 255, 0.3);
   margin-bottom: 28px;
@@ -43,7 +43,7 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.45);
@@ -105,7 +105,7 @@
 }
 
 .ct-clabel {
-  font-size: 8px;
+  font-size: 16px;
   letter-spacing: 4px;
   text-transform: uppercase;
   color: rgba(255, 125, 0, 0.45);
@@ -113,7 +113,7 @@
 }
 
 .ct-cval {
-  font-size: 13px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.7;
   font-style: italic;
