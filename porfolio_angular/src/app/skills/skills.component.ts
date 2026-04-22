@@ -21,7 +21,7 @@ export class SkillsComponent {
       captionKey: 'skills.backendCaption',
       icon: '⚙️',
       catKey: 'skills.backendCat',
-      titleKey: 'skills.backendTitle',
+    
       bars: [
         { label: 'Java', w: 90 },
         { label: 'Spring Boot', w: 85 },
@@ -33,7 +33,7 @@ export class SkillsComponent {
       captionKey: 'skills.frontendCaption',
       icon: '🎨',
       catKey: 'skills.frontendCat',
-      titleKey: 'skills.frontendTitle',
+   
       bars: [
         { label: 'React', w: 82 },
         { label: 'Angular', w: 75 },
@@ -45,7 +45,7 @@ export class SkillsComponent {
       captionKey: 'skills.dbCaption',
       icon: '🗄️',
       catKey: 'skills.dbCat',
-      titleKey: 'skills.dbTitle',
+    
       bars: [
         { label: 'PostgreSQL', w: 82 },
         { label: 'MySQL', w: 80 },
@@ -57,7 +57,7 @@ export class SkillsComponent {
       captionKey: 'skills.devopsCaption',
       icon: '🛠️',
       catKey: 'skills.devopsCat',
-      titleKey: 'skills.devopsTitle',
+   
       bars: [
         { label: 'Docker', w: 75 },
         { label: 'Kafka', w: 65 },

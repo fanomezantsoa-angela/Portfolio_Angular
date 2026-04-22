@@ -76,16 +76,16 @@
     "chapterTitle": "Compétences",
     "backendCaption": "Backend",
     "backendCat": "Côté Serveur",
-    "backendTitle": "Java & Spring",
+
     "frontendCaption": "Frontend",
     "frontendCat": "Côté Client",
-    "frontendTitle": "React & Angular",
+    
     "dbCaption": "Base de données",
     "dbCat": "Données",
-    "dbTitle": "SQL & NoSQL",
+   
     "devopsCaption": "DevOps & Outils",
-    "devopsCat": "Infrastructure",
-    "devopsTitle": "Docker & Kafka"
+    "devopsCat": "Infrastructure"
+    
   },
   "contact": {
     "chapterNum": "04",
