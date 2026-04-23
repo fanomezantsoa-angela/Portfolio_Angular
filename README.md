@@ -6,7 +6,7 @@ Pour ce projet j'ai utilisé Angular. C'est un projet qui contient mes expérien
 
 Voici une capture d'écran de mon portfolio pour vous donner un aperçu du projet :
 
-![Aperçu du portfolio](images/apercu.png)
+![Aperçu du portfolio](images/apercu_portfolio.png)
 
 Je l'ai déployé en utilisant Vercel, un outil utilisé pour déployer les projets JavaScript. En plus, il est gratuit et on peut faire du CI/CD en liant le compte Vercel avec ce repository.
 
