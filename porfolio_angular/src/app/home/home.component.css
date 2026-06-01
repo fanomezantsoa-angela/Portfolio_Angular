@@ -4,8 +4,8 @@ nav {
   z-index: 100;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 16px 40px;
+  gap: 24px;
+  padding: 16px 32px;
   background: rgba(0, 21, 36, 0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 125, 0, 0.1);
@@ -22,6 +22,7 @@ nav {
 .nav-links {
   display: flex;
   gap: 28px;
+  margin-left: auto;
 }
 
 .nav-links a {
@@ -42,6 +43,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 6px;
+  margin-left: 8px;
 }
 
 .lang-switch span {
@@ -68,4 +70,64 @@ nav {
 .lang-switch button.active {
   color: var(--orange);
   border-bottom: 1px solid var(--orange);
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    padding: 12px 24px;
+    gap: 16px;
+  }
+
+  .nav-logo {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .lang-switch button {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    backdrop-filter: blur(5px);
+    padding: 8px 16px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .nav-logo {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+  .nav-links {
+    gap: 10px;
+    margin-left: 0;
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: -38px;
+  }
+  .nav-links a {
+    font-size: 5px;
+    letter-spacing: 1px;
+    
+  }
+  .lang-switch {
+    margin-left: auto;
+    font-size: 5px;
+    letter-spacing: 1px;
+  }
+  .lang-switch button {
+    font-size: 5px;
+    letter-spacing: 1px;
+  }
 }

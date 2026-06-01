@@ -124,3 +124,48 @@
   border-color: rgba(255, 255, 255, 0.4);
   color: rgba(255, 255, 255, 0.7);
 }
+
+@media screen and (max-width: 900px) {
+  .proj-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proj-wide {
+    grid-column: auto;
+  }
+
+  .psr-three {
+    grid-template-columns: 1fr;
+  }
+
+  .proj-inner {
+    padding: 20px 18px;
+  }
+
+  .proj-title,
+  .proj-title-wide {
+    font-size: 18px;
+  }
+
+  .proj-meta,
+  .stage-badge,
+  .psr-label,
+  .psr-text,
+  .plink {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px), (prefers-reduced-motion: reduce) {
+  .proj-lines {
+    display: none;
+  }
+
+  .stack-row {
+    gap: 8px;
+  }
+
+  .proj-links {
+    flex-wrap: wrap;
+  }
+}

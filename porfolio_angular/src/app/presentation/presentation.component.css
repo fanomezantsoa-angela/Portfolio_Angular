@@ -131,8 +131,8 @@
 }
 
 .av-img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   border: 2px solid rgba(255, 125, 0, 0.28);
   background: rgba(255, 125, 0, 0.04);
@@ -150,4 +150,53 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 600px), (prefers-reduced-motion: reduce) {
+  .hero {
+    min-height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+    padding-top: 92px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+    text-align: center;
+    margin-top: -10px;
+  }
+
+  .eyebrow,
+  .im,
+  .hero-right {
+    opacity: 1;
+    font-size: 12px;
+  }
+
+  .name-big {
+    font-size: 15px;
+    min-height: auto;
+  }
+
+  .summary-text {
+    font-size: 10px;
+    min-height: auto;
+    border-left: 0;
+    padding-left: 0;
+
+  }
+
+ 
+
+  .ncursor,
+  .scursor {
+    display: none;
+  }
+
+  .av-wrap {
+    width: 180px;
+    height: 180px;
+  }
 }

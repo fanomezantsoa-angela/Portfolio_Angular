@@ -57,3 +57,27 @@
   width: 22px;
   text-align: right;
 }
+
+@media screen and (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px), (prefers-reduced-motion: reduce) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sk-panel {
+    padding: 18px 14px;
+  }
+
+  .stat-row {
+    gap: 6px;
+  }
+
+  .slabel {
+    width: 56px;
+  }
+}

@@ -128,3 +128,31 @@
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.12);
 }
+
+@media screen and (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px), (prefers-reduced-motion: reduce) {
+  .contact-main,
+  .ct-card {
+    padding: 22px 18px;
+  }
+
+  .ct-tagline {
+    font-size: 18px;
+  }
+
+  .ct-sub,
+  .ct-link,
+  .ct-clabel,
+  .ct-cval {
+    font-size: 14px;
+  }
+
+  .ct-link {
+    gap: 10px;
+  }
+}

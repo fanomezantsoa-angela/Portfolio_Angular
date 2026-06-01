@@ -84,3 +84,50 @@
    font-size: 16px;
   color: rgba(255, 125, 0, 0.5);
 }
+
+@media screen and (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-main {
+    padding: 20px 16px;
+  }
+
+  .about-title {
+    font-size: 16px;
+  }
+
+  .about-subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .about-body {
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .info-card {
+    padding: 14px 14px;
+  }
+
+  .info-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .info-val {
+    font-size: 13px;
+  }
+
+  .info-date {
+    font-size: 12px;
+  }
+
+  .info-card--footer {
+    display: none;
+  }
+}

@@ -11,6 +11,8 @@ import { TranslationService } from '../../Services/Translation.service';
 })
 export class PresentationComponent implements OnInit, OnDestroy {
   private translation = inject(TranslationService);
+  private staticMode =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth <= 600;
 
   displayedName = '';
   displayedSummary = '';
@@ -23,6 +25,11 @@ export class PresentationComponent implements OnInit, OnDestroy {
   constructor() {
     effect(() => {
       const _ = this.translation.currentLang(); 
+      if (this.staticMode) {
+        this.renderStaticHeroText();
+        return;
+      }
+
       if (this.nameDone) {
         this.displayedSummary = '';
         this.summaryDone = false;
@@ -38,6 +45,11 @@ export class PresentationComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    if (this.staticMode) {
+      this.renderStaticHeroText();
+      return;
+    }
+
     setTimeout(() => this.typeName(), 1400);
   }
 
@@ -76,5 +88,14 @@ export class PresentationComponent implements OnInit, OnDestroy {
         this.summaryDone = true;
       }
     }, 26);
+  }
+
+  private renderStaticHeroText() {
+    clearInterval(this.nameInterval);
+    clearInterval(this.summaryInterval);
+    this.displayedName = 'FANOMEZANTSOA';
+    this.displayedSummary = this.translation.t('hero.summary');
+    this.nameDone = true;
+    this.summaryDone = true;
   }
 }
