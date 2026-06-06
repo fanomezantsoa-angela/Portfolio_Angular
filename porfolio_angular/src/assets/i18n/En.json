@@ -69,6 +69,15 @@
     "proj4Title": "Real Estate Web Platform",
     "proj4SolutionLabel": "Solution",
     "proj4Solution": "Property listing app with visit booking, mailing and a secure JWT API with role management.",
+    "githubLabel": "⭙ GitHub",
+     "proj5Caption": "Personal Project · Feb – Present",
+    "proj5Meta": "Personal Project",
+    "proj5Badge": "Personal Project",
+    "proj5Title": "Document Viewer",
+    "proj5ProblemLabel": "Problem",
+    "proj5Problem": "Manual document reading that cost time",
+    "proj5SolutionLabel": "Solution",
+    "proj5Solution": "Application for reading documents in multiple formats with highlighting and privacy management.",
     "githubLabel": "⭙ GitHub"
   },
   "skills": {
