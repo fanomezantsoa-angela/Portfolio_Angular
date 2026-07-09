@@ -65,7 +65,7 @@
     "proj3Solution": "Communication asynchrone via Kafka producers/consumers et conteneurisation Docker complète.",
     "proj4Caption": "ARATO Madagascar · Août–Nov. 2023",
     "proj4Meta": "Stage L2",
-    "proj4Badge": "Expérience Professionnelle",
+
     "proj4Title": "Plateforme Immobilière Web",
     "proj4ProblemLabel": "Problème",
     "proj4Problem": "Gestion manuelle des annonces immobilières et des réservations.",
@@ -74,13 +74,13 @@
     "githubLabel": "⭙ GitHub",
     "proj5Caption": "Projet Personnel · Fév – Maintenant",
     "proj5Meta": "Projet Personnel",
-    "proj5Badge": "Projet Personnel",
+  
     "proj5Title": "Document Viewer",
     "proj5ProblemLabel": "Problème",
     "proj5Problem": "Lecture de documents manuelle qui coustait du temps",
     "proj5SolutionLabel": "Solution",
-    "proj5Solution": "Application de lecture de documents de plusieurs  formats avec  highlighter et gestion de confidentialité .",
-    "githubLabel": "⭙ GitHub"
+    "proj5Solution": "Application de lecture de documents de plusieurs  formats avec  highlighter et gestion de confidentialité . Extraction des entités par une API de FastAPI en Microservice et authentification par JWT.",
+    "githubLabel": "⭙ Lien"
   },
   "skills": {
     "chapterNum": "03",
